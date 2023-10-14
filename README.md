@@ -107,7 +107,7 @@
 
     ```bash
        curl --request PATCH \
-        --url http://localhost:5000/jobs/5 \
+        --url http://localhost:5000/jobs/1 \
         --header 'Content-Type: application/json' \
         --data '{
         "position":"백엔드 주니어 개발자",
@@ -159,7 +159,7 @@
     - `search`: 검색어(문자열)
   - **Response:**
     - 성공 시: 200 OK
-      - 검색조건에 맞는 채용공고 배열
+      - 검색조건에 맞는 채용공고 배열(회사명, 채용포지션, 채용내용, 사용기술 검색결과)
     - 실패 시: 500 Internal Server Error
   - e.g.
   ```bash
@@ -181,7 +181,7 @@
 
     ```bash
     curl --request GET \
-      --url http://localhost:5000/jobs/1
+      --url http://localhost:5000/jobs/2
     ```
 
 6.  채용공고 지원
@@ -203,7 +203,7 @@
       --url http://localhost:5000/application \
       --header 'Content-Type: application/json' \
       --data '{
-      "jobPostingId": 1,
+      "jobPostingId": 2,
       "userId": 1
       }'
     ```
