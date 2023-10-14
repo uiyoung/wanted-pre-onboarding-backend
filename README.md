@@ -51,6 +51,8 @@
 
 <img src=./erd.svg height=600>
 
+from [prisma erd](https://prisma-erd.simonknott.de/)
+
 - 회사는 N개의 채용공고를 등록한다(회사-채용공고 1:N)
 - 사용자는 1개의 채용공고에 지원할 수 있다(사용자-채용공고 1:N)
 
@@ -69,7 +71,7 @@
     - **Response:**
 
       - 성공 시: 201 Created
-        - 생성된 채용공고 객체
+        - 생성된 채용공고 객체 리턴
       - 실패 시: 500 Internal Server Error
 
     - e.g.
@@ -100,9 +102,8 @@
       - skills: 수정할 고사용기술(배열)
     - **Response:**
       - 성공 시: 200 OK
-        - 수정된 게시글 객체
+        - 수정된 게시글 객체 리턴
       - 실패 시: 500 Internal Server Error
-        - `message`: 'update post error'
     - e.g.
 
     ```bash
@@ -143,7 +144,7 @@
   - **URI:** `/jobs`
   - **Response:**
     - 성공 시: 200 OK
-      - 채용공고 목록 배열
+      - 전체 채용공고 목록 배열 리턴
     - 실패 시: 500 Internal Server Error
   - e.g.
 
@@ -159,7 +160,7 @@
     - `search`: 검색어(문자열)
   - **Response:**
     - 성공 시: 200 OK
-      - 검색조건에 맞는 채용공고 배열(회사명, 채용포지션, 채용내용, 사용기술 검색결과)
+      - 검색조건에 맞는 채용공고 배열(회사명, 채용포지션, 채용내용, 사용기술 검색결과) 리턴
     - 실패 시: 500 Internal Server Error
   - e.g.
   ```bash
