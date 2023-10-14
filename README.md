@@ -32,7 +32,7 @@
 
 4. prisma seeding 실행
    ```bash
-   $ RUN npx prisma db seed
+   $ npx prisma db seed
    ```
 
 ### 엔드포인트 호출 방법
@@ -109,7 +109,6 @@
        curl --request PATCH \
         --url http://localhost:5000/jobs/5 \
         --header 'Content-Type: application/json' \
-        --header 'User-Agent: insomnia/8.2.0' \
         --data '{
         "position":"백엔드 주니어 개발자",
         "reward": 1500000,
@@ -203,7 +202,6 @@
     curl --request POST \
       --url http://localhost:5000/application \
       --header 'Content-Type: application/json' \
-      --header 'User-Agent: insomnia/8.2.0' \
       --data '{
       "jobPostingId": 1,
       "userId": 1
