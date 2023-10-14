@@ -27,6 +27,8 @@ export const getJobs = async (req, res) => {
             },
           },
           { position: searchCondition },
+          { content: searchCondition },
+          { skills: { has: req.query.search } },
         ],
       },
       orderBy: { createdAt: 'desc' },
