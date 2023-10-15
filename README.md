@@ -190,10 +190,8 @@ from [prisma erd](https://prisma-erd.simonknott.de/)
     - **Method:** POST
     - **URI:** `/application`
     - **Request Body:**
-      - position: 수정할 채용포지션(문자열)
-      - reward: 수정할 채용보상금(문자열)
-      - content: 수정할 채용내용(문자열)
-      - skills: 수정할 고사용기술(배열)
+      - jobPostingId: 지원할 채용공고 ID(숫자)
+      - userID : 지원자 ID(숫자)
     - **Response:**
       - 성공 시: 200 OK
       - 실패 시: 500 Internal Server Error
